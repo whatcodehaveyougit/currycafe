@@ -1,0 +1,310 @@
+/* 
+ .container-custom {
+    display: flex;
+    align-items: center; /* this align the inidivdual itesm in the center only - not the row as a whole */
+    /* justify-content: center; */
+*/
+ 
+body {
+/* font-family: 'Open Sans', sans-serif;   For some reason this did not change the menu font */
+font-size: 14px;
+line-height: 1.42857143;
+}
+
+ul li { /* I had to do this to change the menu fonts */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width:85%;
+}
+
+#header-wrapper {
+    border-color: transparent;
+    /*height: 121px;  THIS was causing the navbar to display wrong when in Hamburger mode.  That funny bug.  */
+    background: #ed2c37;
+    width:100%;
+}
+
+.navbar-nav {
+    background-color:#ed2c37;
+    /* width:40%; */
+}
+
+@media (max-width:768px) {
+    .navbar-brand {
+        width:50%;
+    }
+}
+
+@media (max-width:768px) {
+    .navbar-brand img {
+        width:85%;
+    }
+}
+
+
+.navbar-nav li a {
+    padding-top:15px!important;
+}
+
+ul {
+    margin-left: 40px;
+}
+
+/* Hamburger - not being transparent! */
+
+.nav-contain {
+    position: relative;
+}
+
+@media (max-width:768px) {
+    .navbar-collapse {
+        position: absolute;
+        z-index: 3;
+        top: 70px;
+        right: 0;
+    }
+}
+
+
+
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
+ #header-wrapper ul > li a {
+    padding-top: 35px;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+#header-wrapper ul > li {
+    width: 100px;
+    height:50px;
+
+}
+
+#slider-container {
+    padding:0px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    display:block;
+}
+
+@media (max-width:768px) {
+    .carousel img {
+    height: 200px;
+}
+}
+
+
+/* Using this to control the size of the images is useless.  I need to set the size of the images in the carousel
+Setting the size of the parent element will not make any difference */
+#slider-container {
+    height:50px;
+}
+
+/* .row { /*For some reason “row” was only set to 720px.  I needed to make it 100% manually even with container-fluid. */
+   /* align-items: center;
+   margin-left:50px;
+} */ 
+
+
+/* Centering an element inside a div */
+/* Centering it using this trick is very logical - making it block - then auto margin makes sense.  
+If it is not a block element taking up the whole width then where would the edge margins be?  Hence why the margin:auto trick would not work in that situation */
+
+.image-mid img { /* Having no fixed width and height auto means this was displaying really bad on mobile */
+    height:auto;
+    width: 50vw;
+    display: block;
+    margin:auto;
+}
+
+
+
+/* BIG NEWS - Stating Images dimensions in % % % % makes them responsive!  */
+.images {
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    text-align:center;
+    margin-top: 20px;
+}
+
+.chef {
+    max-height:80%;
+}
+
+@media (max-width:1000px) {
+    .chef {
+        display:none;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.text {
+    width:70%;
+    margin: 40px;
+    margin:auto;
+    display:block;
+}
+
+#grid {
+    max-width:100%;
+    /* margin-top:50px;     Somehow how margin top doesn't work on this now that its block element.....
+    margin-bottom:50px; */
+    padding-top:50px;
+    padding-bottom:50px;
+    display:block;
+    margin:auto;
+}
+
+.curry-image { /* This makes the images responsive but now they are not stretching to fit the box */
+    max-width: 100%;
+    height:auto;
+    display: block; /* Putting display block here doesn't make it 1 image a line */
+    margin: auto;
+    position: relative;
+}
+
+
+
+.image-container {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+/*   .container:hover .overlay {  This is what I had before!  obviously the container was targetting anything!
+    opacity: 1;
+  }*/
+
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+
+  footer {
+      background-color:#009cd0;
+      display:block;
+      width:100%;
+      height:150px;
+  }
+
+  @media (max-width:975px) {
+      footer {
+    height: 250px;
+      }
+    }
+
+  /* footer ul {
+      margin-top:20px;
+  } */
+
+  .margin-class {
+    margin-top:20px;
+    height:150px;
+  }
+
+  footer li {
+      color:white;
+      font-size: 12px;
+      padding: 4px 15px;
+      height: 30px;
+     line-height: 30px;
+      position: relative;
+    display: block;
+    width: 100%; /* This makes sure that the Ts and Cs is on the same line - the <li> element stretches the width of the container */
+  }
+
+  @media (max-width:991px) {
+      .footer-div li {
+        width: 33%;
+        text-align: center;
+        line-height: 13px;
+      }
+  }
+
+  @media (max-width:991px) {
+    .footer-div {
+        height: 20px;
+    }
+  }
+
+  @media (max-width:991px) {
+      .margin-top-media {
+    margin-top: 10px;
+  }
+}
+
+  
+.icon {
+    height: 24%;
+    width:auto;
+    display:block;
+    margin-top: 10px;
+}
+
+@media (max-width:991px) {
+    .icon {
+     height: 90%;
+}
+}
+
+
+@media (max-width:991px) {
+.flex-center {
+    display:flex;
+    justify-content: center;
+    height: 30px;
+    flex-wrap: wrap
+}
+}
+
+
+
+
+/* .icon-diff {
+    height: 300%;  Why did I have to make it 300% for it to be a vaguely normal size??
+    width:auto;
+    display:block;
+} */

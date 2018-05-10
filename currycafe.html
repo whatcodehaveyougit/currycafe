@@ -1,0 +1,223 @@
+<!doctype html> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" type"text/css" href="currycafe.css">
+
+      <!-- Google Font for sans -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="header-wrapper">
+    <div class="container nav-contain">
+
+        <a class="navbar-brand">
+            <img src="currylogo.png">
+            </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Bug - When clicking on the hamburger menu it dissapears up and some of the menu does too -->
+    
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"> <!-- The class nav-item and nav-link do quite a lot to the styling of these elements! -->
+            <a class="nav-link align-middle" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <!-- Instead of having these in 2 separate navigation menus / 2 different divs.  They are in the same div but are simply different <ul>s. -->
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item"><a class="nav-link">Login</a></li>
+                <li class="nav-item"><a class="nav-link"> £0.00 <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+              </ul>
+      
+            </div><!-- Navbar collapse-->
+
+    </div> <!-- container -->
+    </nav>
+
+
+    <!-- I did have a container here as a wrapper however it just caused problems -->
+    <!-- For example when I went to put in the next item I would have to do the clearfix hack as the image was appearing behind the carousel -->
+ 
+    <div id="unique-id-for-carousel" class="carousel slide" data-ride="carousel" style="width:100%; display:block;">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li> <!-- Without active class the carousel will not be visible -->
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image1.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+              <h3>Food Glorious Good</h3>
+              <p>Edinburgh's premier curry cafe</p>
+            </div>   
+          </div>
+          
+
+          <div class="carousel-item">
+            <img src="image2.jpg" alt="Chicago">
+            <div class="carousel-caption">
+                <h3>Food Glorious Good</h3>
+                <p>Edinburgh's premier curry cafe</p>
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="image3.jpg" alt="New York">
+            <div class="carousel-caption">
+                <h3>Food Glorious Good</h3>
+                <p>Edinburgh's premier curry cafe</p>
+            </div>   
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#unique-id-for-carousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#unique-id-for-carousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <div style="display:block; height:1px;"></div>
+          
+
+    <div class="image-mid">
+      <img style="max-width:40%;" src="image4.jpg">
+    </div>
+
+    <div class="image-mid">
+        <img src="image5.jpg">
+    </div>
+  
+      <!-- Hack I have done to 'fix' this.  Made the Menu smaller and then have the chef dissapear at 1000px -->
+      <!-- Crux - I could  -->
+      <div class="images clearfix">
+          <img style="width:60%;" src="image7.jpg">
+          <img class="chef" src="image8.jpg">
+        </div>
+
+
+
+        <!-- <div class="text">   FOR SOME REASON THIS IS DISPLAYING AT THE TOP OF THE PAGE...
+
+
+            <p>Order food online in Leith Walk! It's so easy to use, fast and convenient. Try our new, online website which contains our entire takeaway menu. Curry Cafe is located in Elm Row, Leith Walk.
+
+                You can now order online, all your favourite dishes and many more delicious options, and have them delivered straight to your door in no time at all.
+                
+                Here at Curry Cafe we are constantly striving to improve our service and quality in order to give our customers the very best experience. As a result, we are finally proud to unveil and introduce our latest improvement, our new online ordering website! You can now relax at home and order your favourite, freshly prepared meals from Curry Cafe, online. You can even pay online!
+                
+                Curry Cafe in Leith Walk will always be offering great food at affordable prices. Please feel free to browse our new website and place your order online. Remember to check our new online ordering site to get up to date prices and exclusive special offers, limited to our online customers only!
+                
+                Thank you for visiting Curry Cafe in Elm Row, Leith Walk. We hope you enjoy our online ordering website and your food.</p>
+        </div> -->
+
+        <div class="container" id="grid">
+          <div class="row" style="max-width:100%;">
+           
+            <div class="col-md-3 col-sm-12 image-container"> <!-- adding another class here screws up the columns - why?-->
+             <img src="curry-grid.jpg" class="curry-image">
+             <div class="overlay"> <!-- right now it is overlaying on every image - how to stop that??-->
+                <div class="text">Hello World</div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12 image-container">
+                <img src="curr-grid-2.jpg" class="curry-image">
+                <div class="overlay">
+                    <div class="text">Hello World</div>
+                </div>
+              </div>
+
+            <div class="col-md-3 col-sm-12 image-container">
+                <img src="curry-grid.jpg" class="curry-image">
+                <div class="overlay">
+                    <div class="text">Hello World</div>
+                  </div>
+              </div>
+              
+            <div class="col-md-3 col-sm-12 image-container">
+                <img src="curr-grid-2.jpg" class="curry-image">
+                <div class="overlay">
+                    <div class="text">Hello World</div>
+                  </div>
+              </div>
+
+          </div><!--row -->
+        </div><!-- container-->
+      </body>
+
+<footer>
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-3 col-md-12 margin-class footer-div">
+      <ul class="resp-nav-first nav nav-pills nav-stacked">
+        <li class="align-middle">Privacy Policy</li>
+        <li>Terms and Conditions</li>
+        <li>Twitter</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-12 margin-class footer-div">
+        <ul class="resp-nav-first nav nav-pills nav-stacked margin-top-media">
+            <li class="align-middle">Allergy Information</li>
+            <li>Facebook</li>
+            <li>Unsubscribe</li>
+          </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-12 margin-class flex-center">
+        <img src="appStore.jpg" class="icon">
+        <img src="googlePlay.jpg" class="icon">
+</div>
+<!-- 
+    <div class="col-3">   When I wrapped the images in the <li> tag I had the height as being 300% to make it the desired size.  Why did I have to do that?
+        <ul class="resp-nav-first nav nav-pills nav-stacked">
+            <li><img src="appStore.jpg" class="icon"></li>
+            <li><img src="googlePlay.jpg" class="icon"></li>
+          </ul>
+    </div> -->
+
+    <div class="col-lg-3 col-md-12 margin-class flex-center">
+        <img src="payment.jpg" class="icon">
+        <img src="payment-2.jpg" class="icon" style="background: #fff;border-radius: 5px!important; float:right;">
+</div>
+
+  </div><!-- row-->
+</div><!-- container fluid-->
+
+</footer>
+
+
+
+
+
+
+  </html>
